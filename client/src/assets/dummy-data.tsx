@@ -92,9 +92,9 @@ export const footerLinks = [
         title: "Company",
         links: [
             { name: "Home", url: "#" },
-            { name: "Services", url: "#" },
-            { name: "Work", url: "#" },
-            { name: "Contact", url: "#" }
+            { name: "Features", url: "#" },
+            { name: "Pricing", url: "#" },
+            { name: "FAQ", url: "#" }
         ]
     },
     {

@@ -34,7 +34,7 @@ export default function CTA() {
                             transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}
                         >
                             <GhostButton className="px-8 py-3 gap-2">
-                                Start Creating <ArrowRightIcon size={20} />
+                                Start Creating Now <ArrowRightIcon size={20} />
                             </GhostButton>
                         </motion.div>
 
