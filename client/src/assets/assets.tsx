@@ -1,129 +1,174 @@
-import logo from './logo.svg'
-import logo_icon from './logo_icon.svg'
-import facebook_icon from './facebook_icon.svg'
-import instagram_icon from './instagram_icon.svg'
-import twitter_icon from './twitter_icon.svg'
-import star_icon from './star_icon.svg'
-import rating_star from './rating_star.svg'
-import sample_img_1 from './sample_img_1.png'
-import sample_img_2 from './sample_img_2.png'
-import profile_img_1 from './profile_img_1.png'
-import profile_img_2 from './profile_img_2.png'
-import step_icon_1 from './step_icon_1.svg'
-import step_icon_2 from './step_icon_2.svg'
-import step_icon_3 from './step_icon_3.svg'
-import email_icon from './email_icon.svg'
-import lock_icon from './lock_icon.svg'
-import cross_icon from './cross_icon.svg'
-import star_group from './star_group.png'
-import credit_star from './credit_star.svg'
-import profile_icon from './profile_icon.png'
+import logo from './logo.svg';
+import product1 from './product1.jpg'; // white watch
+import product2 from './product2.jpg'; // polaroid camera
+import product3 from './product3.jpg'; // sunglasses
+import product4 from './product4.jpg'; // headphone
+import product5 from './product5.jpg'; // speaker
+import product6 from './product6.jpg'; // sneakers
+import product7 from './product7.png'; // trolly bag
+import model1 from './model1.png'; // model men
+import model2 from './model2.jpg'; // model women
+import generated1 from './generated1.png'; // men with trolly bag
+import generated2 from './generated2.png'; // women with trolly bag
+import generated3 from './generated3.png'; // men with shoes
+import generated4 from './generated4.png'; // women with shoes
+import generatedVideo1 from './generatedVideo1.mp4'; // random product men 9:16
+import generatedVideo2 from './generatedVideo2.mp4'; // random product women 16:9
 
-// Assets
 export const assets = {
-  logo,
-  logo_icon,
-  facebook_icon,
-  instagram_icon,
-  twitter_icon,
-  star_icon,
-  rating_star,
-  sample_img_1,
-  sample_img_2,
-  email_icon,
-  lock_icon,
-  cross_icon,
-  star_group,
-  credit_star,
-  profile_icon
-}
+    logo,
+    product1,
+    product2,
+    product3,
+    product4,
+    product5,
+    product6,
+    product7,
+    model1,
+    model2,
+    generated1,
+    generated2,
+    generated3,
+    generated4,
+    generatedVideo1,
+    generatedVideo2,
+};
 
-// Step Type
-interface Step {
-  title: string
-  description: string
-  icon: string
-}
-
-// Steps Data
-export const stepsData: Step[] = [
-  {
-    title: 'Describe Your Vision',
-    description: 'Type a phrase, sentence, or paragraph that describes the image you want to create.',
-    icon: step_icon_1,
-  },
-  {
-    title: 'Watch the Magic',
-    description: 'Our AI-powered engine will transform your text into a high-quality, unique image in seconds.',
-    icon: step_icon_2,
-  },
-  {
-    title: 'Download & Share',
-    description: 'Instantly download your creation or share it with the world directly from our platform.',
-    icon: step_icon_3,
-  },
-]
-
-// Testimonial Type
-interface Testimonial {
-  image: string
-  name: string
-  role: string
-  stars: number
-  text: string
-}
-
-// Testimonials Data
-export const testimonialsData: Testimonial[] = [
-  {
-    image: profile_img_1,
-    name: 'Donald Jackman',
-    role: 'Graphic Designer',
-    stars: 5,
-    text: `I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
-  },
-  {
-    image: profile_img_2,
-    name: 'Richard Nelson',
-    role: 'Content Creator',
-    stars: 5,
-    text: `I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
-  },
-  {
-    image: profile_img_1,
-    name: 'Donald Jackman',
-    role: 'Graphic Designer',
-    stars: 5,
-    text: `I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
-  },
-]
-
-// Plan Type
-interface Plan {
-  id: string
-  price: number
-  credits: number
-  desc: string
-}
-
-// Plans Data
-export const plans: Plan[] = [
-  {
-    id: 'Basic',
-    price: 10,
-    credits: 100,
-    desc: 'Best for personal use.'
-  },
-  {
-    id: 'Advanced',
-    price: 50,
-    credits: 500,
-    desc: 'Best for business use.'
-  },
-  {
-    id: 'Business',
-    price: 250,
-    credits: 5000,
-    desc: 'Best for enterprise use.'
-  },
-]
+export const dummyGenerations = [
+    {
+        id: 'gen_1',
+        name: 'Trolly Bag Campaign',
+        aspectRatio: '9:16',
+        productDescription: 'Sky Colored Trolly Bag',
+        productName: 'Trolly Bag',
+        targetLength: 5,
+        uploadedImages: [product7, model1],
+        userId: 'user_1',
+        userPrompt: 'Create the video where center of attraction is a trolly bag',
+        generatedImage: generated1,
+        generatedVideo: generatedVideo1,
+        isGenerating: false,
+        isPublished: false,
+        createdAt: '2023-03-15T00:00:00.000Z',
+        updatedAt: '',
+    },
+    {
+        id: 'gen_2',
+        name: 'Sneakers Promo Shoot',
+        aspectRatio: '16:9',
+        productDescription: 'Stylish White Sneakers',
+        productName: 'Sneakers',
+        targetLength: 10,
+        uploadedImages: [product6, model2],
+        userId: 'user_2',
+        userPrompt: 'Showcase the sneakers in a dynamic and fashionable way',
+        generatedImage: generated4,
+        generatedVideo: generatedVideo2,
+        isGenerating: false,
+        isPublished: true,
+        createdAt: '2023-03-16T00:00:00.000Z',
+        updatedAt: '',
+    },
+    {
+        id: 'gen_3',
+          name: 'Vintage Camera Showcase',
+        aspectRatio: '9:16',
+        productDescription: 'Classic Polaroid Camera',
+        productName: 'Polaroid Camera',
+        targetLength: 7,
+        uploadedImages: [product2, model1],
+        userId: 'user_1',
+        userPrompt: 'Highlight the vintage appeal of the camera',
+        generatedImage: product1,
+        generatedVideo: generatedVideo1,
+        isGenerating: false,
+        isPublished: false,
+        createdAt: '2023-03-17T00:00:00.000Z',
+        updatedAt: '',
+    },
+    {
+        id: 'gen_4',  
+        name: 'Headphones Product Ad',
+        aspectRatio: '16:9',
+        productDescription: 'Modern Wireless Headphones',
+        productName: 'Headphones',
+        targetLength: 8,
+        uploadedImages: [product4, model2],
+        userId: 'user_2',
+        userPrompt: 'Emphasize the comfort and sound quality of the headphones',
+        generatedImage: product2,
+        generatedVideo: generatedVideo2,
+        isGenerating: true,
+        isPublished: false,
+        createdAt: '2023-03-18T00:00:00.000Z',
+        updatedAt: '',
+    },
+    {
+        id: 'gen_5',
+        name: 'Polaroid Classic Campaign',
+        aspectRatio: '9:16',
+        productDescription: 'Classic Polaroid Camera',
+        productName: 'Polaroid Camera',
+        targetLength: 7,
+        uploadedImages: [product2, model1],
+        userId: 'user_1',
+        userPrompt: 'Highlight the vintage appeal of the camera',
+        generatedImage: product3,
+        generatedVideo: generatedVideo1,
+        isGenerating: false,
+        isPublished: false,
+        createdAt: '2023-03-17T00:00:00.000Z',
+        updatedAt: '',
+    },
+    {
+        id: 'gen_6',
+        name: 'Wireless Headphones Reel',
+        aspectRatio: '1:1',
+        productDescription: 'Modern Wireless Headphones',
+        productName: 'Headphones',
+        targetLength: 8,
+        uploadedImages: [product4, model2],
+        userId: 'user_2',
+        userPrompt: 'Emphasize the comfort and sound quality of the headphones',
+        generatedImage: product4,
+        generatedVideo: generatedVideo2,
+        isGenerating: true,
+        isPublished: false,
+        createdAt: '2023-03-18T00:00:00.000Z',
+        updatedAt: '',
+    },
+    {
+        id: 'gen_7',
+        name: 'Retro Camera Highlight',
+        aspectRatio: '9:16',
+        productDescription: 'Classic Polaroid Camera',
+        productName: 'Polaroid Camera',
+        targetLength: 7,
+        uploadedImages: [product2, model1],
+        userId: 'user_1',
+        userPrompt: 'Highlight the vintage appeal of the camera',
+        generatedImage: product3,
+        generatedVideo: generatedVideo1,
+        isGenerating: false,
+        isPublished: false,
+        createdAt: '2023-03-17T00:00:00.000Z',
+        updatedAt: '',
+    },
+    {
+        id: 'gen_8',
+        name: 'Audio Experience Promo',
+        aspectRatio: '1:1',
+        productDescription: 'Modern Wireless Headphones',
+        productName: 'Headphones',
+        targetLength: 8,
+        uploadedImages: [product4, model2],
+        userId: 'user_2',
+        userPrompt: 'Emphasize the comfort and sound quality of the headphones',
+        generatedImage: product4,
+        generatedVideo: generatedVideo2,
+        isGenerating: true,
+        isPublished: false,
+        createdAt: '2023-03-18T00:00:00.000Z',
+        updatedAt: '',
+    },
+];
