@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Title from "../components/Title"
 import UploadZone from "../components/UploadZone"
-import { div } from "framer-motion/client"
+
 import { Loader2Icon, RectangleHorizontalIcon, RectangleVerticalIcon, Wand2Icon } from "lucide-react"
 import { PrimaryButton } from "../components/Buttons"
 
