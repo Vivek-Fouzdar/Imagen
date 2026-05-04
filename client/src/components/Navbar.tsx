@@ -1,6 +1,6 @@
 import { DollarSignIcon, FolderEditIcon, GalleryHorizontalEnd, MenuIcon,  SparkleIcon, XIcon } from 'lucide-react';
 import { GhostButton, PrimaryButton } from './Buttons';
-import { useState } from 'react';
+import { use, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { assets } from '../assets/assets';
@@ -13,6 +13,7 @@ export default function Navbar() {
     const {openSignIn,openSignUp} = useClerk()
 
     const [isOpen, setIsOpen] = useState(false);
+    
 
     const navLinks = [
         { name: 'Home', href: '/#' },

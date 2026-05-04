@@ -30,7 +30,7 @@ const ProjectCard = ({gen, setGenerations, forCommunity = false} : {gen: Project
                 <img src={gen.generatedImage} alt={gen.productName} className={`absolute inset-0 w-full h-full object-cover transition duration-500 ${gen.generatedVideo ? `group-hover:opacity-0` :`group-hover:scale-105`}`}/>
             )}
 
-            {gen.generatedImage && (
+            {gen.generatedVideo && (
                 <video src={gen.generatedVideo} muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-500" onMouseEnter={(e)=>e.currentTarget.play()} onMouseLeave={(e)=>e.currentTarget.pause()}/>
             )}
 

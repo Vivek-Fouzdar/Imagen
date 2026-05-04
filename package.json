@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@clerk/themes": "^2.4.57",
     "express": "^5.2.1"
   }
 }
