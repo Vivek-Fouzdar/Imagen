@@ -6,6 +6,7 @@ import { clerkMiddleware } from '@clerk/express'
 import clerkWebhooks from './controllers/clerk';
 import * as Sentry from "@sentry/node"
 import userRouter from "./routes/userRoutes";
+import projectRouter from "./routes/projectRoutes";
 
 const app = express();
 
@@ -29,6 +30,8 @@ app.get("/debug-sentry", function mainHandler(req, res) {
 });
 
 app.use('/api/user', userRouter)
+app.use('/api/project', projectRouter)
+
 
 // The error handler must be registered before any other error middleware and after all controllers
 Sentry.setupExpressErrorHandler(app);
