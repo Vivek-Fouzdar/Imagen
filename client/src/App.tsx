@@ -10,10 +10,13 @@ import Result from './pages/Result';
 import Community from './pages/Community';
 import Plans from './pages/Plans';
 import Loading from './pages/Loading';
+import {Toaster} from 'react-hot-toast'
 
 function App() {
 	return (
 		<>
+
+			<Toaster toastOptions={{style: {background: '#333', color: "#fff"}}}/>
 			<SoftBackdrop />
 			<LenisScroll />
 			<Navbar />

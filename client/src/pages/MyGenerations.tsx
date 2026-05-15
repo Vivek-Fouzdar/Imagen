@@ -4,6 +4,9 @@ import { dummyGenerations } from "../assets/assets"
 import { Loader2Icon } from "lucide-react"
 import ProjectCard from "./ProjectCard"
 import { PrimaryButton } from "../components/Buttons"
+import api from "../configs/axios"
+import { useAuth } from "@clerk/react"
+
 
 
 const MyGenerations = () => {
@@ -15,6 +18,7 @@ const MyGenerations = () => {
             setTimeout(()=>{
                 setGenerations(dummyGenerations);
             setLoading(false)}, 3000)
+          
         }
     
         useEffect(()=>{
